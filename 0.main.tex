@@ -1,0 +1,115 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]
+{\bfseries\Large}{\thechapter. }{0em}{}
+
+% Nested enumeration numbering
+\renewcommand{\labelenumi}{\arabic{enumi}.} 
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1
+
+	\raggedleft % Right align the title page
+	
+	\rule{1pt}{\textheight} % Vertical line
+	\hspace{0.04\textwidth} % Whitespace between the vertical line and title page text
+	\parbox[b]{0.9\textwidth}{ % Paragraph box for holding the title page text, adjust the width to move the title page left or right on the page
+		
+		{\Huge {\ttfamily \textbf{EXERCÍCIOS DE ESTATÍSTICA}}} \\[3\baselineskip]
+		{\Large\textsc{Bárbara P. O. Pasini} \\ \Large\textsc{Cecília F. Q. Rokenbach} \\ \Large\textsc{Filipe J. Zabala} \\ \Large\textsc{Hélio R. Bittencourt} \\ \Large\textsc{Lori Viali} \\ \Large\textsc{Nathália L. O. Sobrosa} \\ \Large\textsc{Rossana F. Benites} \\ \Large\textsc{Sérgio K. Kato} } % Author name, lower case for consistent small caps
+	
+		\vspace{0.5\textheight} % Whitespace between the title block and the publisher
+		
+		\noindent O material desta relação de exercícios foi baseado na apostila organizada pelo professor José Rodrigues Picarelli, que gentilmente concedeu permissão para uso e eventual alteração. O material foi compilado durante a década de 1970 com a colaboração de outros professores do então Departamento de Estatística do Instituto de Matemática da PUCRS, não tendo sido oficialmente publicado.
+\\[2\baselineskip]
+		
+\begin{center}
+\texttt{Versão}\\ 
+\texttt{2020-06-27} 
+\end{center}
+		
+	}
+
+\end{titlepage}
+
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Print the table of contents itself
+
+
+%----------------------------------------------------------------------------------------
+%	SETTING TO ROMAN NUMBERING
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+%\renewcommand{\thechapter}{\arabic{chapter}}
+%\setcounter{chapter}{0}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\input{1.descritiva.tex}
+\input{2.probabilidade.tex}
+\input{3.variavelad.tex}
+\input{4.distbinomial.tex}
+\input{5.distpoisson.tex}
+\input{6.variavelac.tex}
+\input{7.distnormal.tex}
+\input{8.aproxnormbin.tex}
+\input{9.distamostrais.tex}
+\input{10.estimacao.tex}
+\input{11.testesdehipoteses.tex}
+\input{12.peqamostras.tex}
+\input{13.relativos.tex}
+\input{14.numerosindices.tex}
+\input{15.deflacionamento.tex}
+\input{16.ajustamento.tex}
+\input{17.seriestemporais.tex}
+\input{18.regrecorre.tex}
+\input{19.regrecorreamostra.tex}
+\input{cadastros.tex}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+%\section*{Bibliografia}
+%\addcontentsline{toc}{chapter}{\textcolor{wiley}{Bibliography}} % Add a Bibliography heading to the table of contents
+
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage % Make sure the index starts on an odd (right side) page
+%\phantomsection
+\setlength{\columnsep}{0.75cm} % Space between the 2 columns of the index
+%\addcontentsline{toc}{chapter}{\textcolor{wiley}{Index}} % Add an Index heading to the table of contents
+%\printindex % Output the index
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
